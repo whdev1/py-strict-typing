@@ -1,5 +1,5 @@
 # Python Strong Typing
-This is a library that enables runtime type-checking for Python classes and functions via the use of a single `@strongly_typed` decorator. Classes may enforce strong typing of their members at declaration and assignment and functions are able to have type-checked parameters and return values.
+This is a library that enables runtime type-checking for Python classes and functions via the use of a single `@strongly_typed` decorator. Classes may enforce strong typing of their members and functions are able to have type-checked parameters and return values via type hints.
 
 ## Installation
 This library is available via PyPI. It may be installed with the following pip command:
