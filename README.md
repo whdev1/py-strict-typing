@@ -49,7 +49,7 @@ inst.a = 123        # valid. 'a' has no hint so it is not checked
 ```
 
 ### With Functions
-Any Python function may declare its parameters and return type as strongly-typed using the `@strongly_typed` directive:
+Any Python function may declare its parameters and return type as strongly-typed using the `@strongly_typed` decorator:
 
 ```Python
 from strong_typing import *
