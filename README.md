@@ -1,22 +1,22 @@
-# Python Strong Typing
-This is a library written in pure Python that enables runtime type-checking for classes and functions via the use of a single `@strongly_typed` decorator. Classes may enforce strong typing of their members and functions are able to have type-checked parameters and return values via type hints.
+# Python Strict Typing Library
+This is a library written in pure Python that enables runtime type-checking for classes and functions via the use of a single `@strictly_typed` decorator. Classes may enforce strict typing of their members and functions are able to have type-checked parameters and return values via type hints.
 
 ## Installation
 This library is available via PyPI. It may be installed with the following pip command:
 
 ```
-pip install py-strong-typing
+pip install py-strict-typing
 ```
 
 ## Usage
 
 ### With Classes
-Any class may declare itself as having strongly-typed members using the `@strongly_typed` decorator:
+Any class may declare itself as having strictly-typed members using the `@strictly_typed` decorator:
 
 ```Python
-from strong_typing import *
+from strict_typing import *
 
-@strongly_typed
+@strictly_typed
 class example_class:
     a: int
     b: int
@@ -37,9 +37,9 @@ example_inst.a = 'hello'    # results in TypeError
 Any members that do not have a type hint will not be checked. Also note that static assignments at the time of class declaration cannot be checked.
 
 ```Python
-from strong_typing import *
+from strict_typing import *
 
-@strongly_typed
+@strictly_typed
 class example_class:
     a = 'hello'
     b: list = 123   # valid. static assignment at declaration is not checked
@@ -49,12 +49,12 @@ inst.a = 123        # valid. 'a' has no hint so it is not checked
 ```
 
 ### With Functions
-Any Python function may declare its parameters and return type as strongly-typed using the `@strongly_typed` decorator:
+Any Python function may declare its parameters and return type as strictly-typed using the `@strictly_typed` decorator:
 
 ```Python
-from strong_typing import *
+from strict_typing import *
 
-@strongly_typed
+@strictly_typed
 def test(a: int, b: str) -> str:
     return str(a) + b
 
@@ -62,12 +62,12 @@ print(test(123, 'hello'))           # returns '123hello'
 print(test(10.0, 'invalid'))        # results in TypeError
 ```
 
-As with strongly-typed classes, any parameters that lack a hint will not be checked.
+As with strictly-typed classes, any parameters that lack a hint will not be checked.
 
 ```Python
-from strong_typing import *
+from strict_typing import *
 
-@strongly_typed
+@strictly_typed
 def test(a, b: str) -> str:
     return str(a) + b
 
@@ -77,13 +77,13 @@ print(test(10.0, 'not invalid'))    # returns '10.0not invalid' as 'a' is no lon
 This rule also applies to the return type hint:
 
 ```Python
-from strong_typing import *
+from strict_typing import *
 
-@strongly_typed
+@strictly_typed
 def test(a: int):
     return a + 123
 
-@strongly_typed
+@strictly_typed
 def test2(a: int) -> str:
     return a + 123
 

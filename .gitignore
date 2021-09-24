@@ -1,4 +1,4 @@
 dist
-py_strong_typing.egg-info
+py_strict_typing.egg-info
 tests.py
 __pycache__

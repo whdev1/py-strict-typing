@@ -1,16 +1,16 @@
 from distutils.core import setup
 import setuptools
 setup(
-  name = 'py-strong-typing',
-  packages = ['strong_typing'],
+  name = 'py-strict-typing',
+  packages = ['strict_typing'],
   version = '0.1.0',
   license='MIT',
-  description = 'A library for enforcing strong typing of class members and function parameters in Python.',
+  description = 'A library for enforcing strict typing of class members and function parameters in Python.',
   author = 'whdev1',
   author_email = 'whdev1@protonmail.com',
-  url = 'https://github.com/whdev1/py-strong-typing',
-  download_url = 'https://github.com/whdev1/py-strong-typing/archive/refs/tags/v0.1.0.tar.gz',
-  keywords = ['Strong', 'Typing', 'Type-checking', 'Decorator', 'py-strong-typing'],
+  url = 'https://github.com/whdev1/py-strict-typing',
+  download_url = 'https://github.com/whdev1/py-strict-typing/archive/refs/tags/v0.1.0.tar.gz',
+  keywords = ['Strict', 'Typing', 'Type-checking', 'Decorator', 'py-strict-typing'],
   install_requires=[],
   classifiers=[
     'Development Status :: 3 - Alpha',
