@@ -24,7 +24,7 @@ class example_class:
 print(example_class.a)    # None
 ```
 
-Upon assignment, any member of an instance of the class that provides a type hint will be type checked on assignment:
+Upon assignment, any member of an instance of the class that provides a type hint will be type checked:
 
 ```Python
 example_inst = example_class()
