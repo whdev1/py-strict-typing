@@ -23,7 +23,7 @@ class _typed_function:
         # type check all kwargs
         for key in kwargs:
             if key in self.__types__.keys():
-                if not issubclass(kwargs[key].__class__, self.__types__[key]):
+                if not issubclass(kwargs[key].__class__, self.__types__[key]) and not kwargs[key].__class__ == type(None):
                     raise TypeError(
                         'object of type \'' + str(kwargs[key].__class__.__name__)+ '\' cannot be assigned '
                         'to parameter \'' + key + '\' of type \'' + str(self.__types__[key].__name__) + '\''
@@ -35,7 +35,7 @@ class _typed_function:
         # type check all positional args
         for n in range(len(args)):
             if params_copy[n] in self.__types__.keys():
-                if not issubclass(args[n].__class__, self.__types__[params_copy[n]]):
+                if not issubclass(args[n].__class__, self.__types__[params_copy[n]]) and not args[n].__class__ == type(None):
                     raise TypeError(
                             'object of type \'' + str(args[n].__class__.__name__)+ '\' cannot be assigned '
                             'to parameter \'' + params_copy[n] + '\' of type \'' + str(self.__types__[params_copy[n]].__name__) + '\''
@@ -46,7 +46,7 @@ class _typed_function:
 
         # if a return type was specified, check the return type
         if hasattr(self, '__returntype__'):
-            if not issubclass(retval.__class__, self.__returntype__):
+            if not issubclass(retval.__class__, self.__returntype__) and not retval.__class__ == type(None):
                 raise TypeError(
                             'object of type \'' + str(retval.__class__.__name__)+ '\' cannot be assigned '
                             'to return value of type \'' + str(self.__returntype__.__name__) + '\''

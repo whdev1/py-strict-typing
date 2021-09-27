@@ -3,13 +3,13 @@ import setuptools
 setup(
   name = 'py-strict-typing',
   packages = ['strict_typing'],
-  version = '0.1.0',
+  version = '0.1.1',
   license='MIT',
   description = 'A library for enforcing strict typing of class members and function parameters in Python.',
   author = 'whdev1',
   author_email = 'whdev1@protonmail.com',
   url = 'https://github.com/whdev1/py-strict-typing',
-  download_url = 'https://github.com/whdev1/py-strict-typing/archive/refs/tags/v0.1.0.tar.gz',
+  download_url = 'https://github.com/whdev1/py-strict-typing/archive/refs/tags/v0.1.1.tar.gz',
   keywords = ['Strict', 'Typing', 'Type-checking', 'Decorator', 'py-strict-typing'],
   install_requires=[],
   classifiers=[
